@@ -1,0 +1,5 @@
+
+2025-09-28 21:53:17.646918 - Data nu este valida: Formatul necesar YYYY-MM-DD si trebuie sa fie mai mica decat ziua de azi
+2025-09-28 21:53:28.477780 - Moneda de bază 'eu' nu există în baza de date.
+2025-09-28 21:53:38.671895 - Data nu este valida: Formatul necesar YYYY-MM-DD si trebuie sa fie mai mica decat ziua de azi
+2025-09-28 21:54:01.691006 - Moneda țintă 'eu' nu este disponibilă pentru conversie din 'eur'.
