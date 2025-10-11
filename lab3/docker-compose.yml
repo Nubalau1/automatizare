@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  currency-cron:
+    build: .
+    container_name: currency_cron_container
+    volumes:
+      - ./data:/app/data
+      - ./error.log:/app/error.log
+    restart: unless-stopped

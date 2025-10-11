@@ -1,0 +1,5 @@
+# Daily at 06:00 for MDL to EUR
+0 6 * * * root python3 /app/currency_exchange_rate.py mdl eur $(date -d 'yesterday' +%Y-%m-%d) >> /var/log/cron.log 2>&1
+
+# Weekly on Friday at 17:00 for MDL to USD
+0 17 * * 5 root python3 /app/currency_exchange_rate.py mdl usd $(date -d 'last friday' +%Y-%m-%d) >> /var/log/cron.log 2>&1
