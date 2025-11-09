@@ -1,0 +1,34 @@
+pipeline {
+    agent {
+        label 'php-agent'
+    }
+    
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                echo 'Preparing project...'
+                sh 'php -v'
+                sh 'composer install'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh './vendor/bin/phpunit --configuration phpunit.xml'
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline completed.'
+        }
+        success {
+            echo 'All stages completed successfully!'
+        }
+        failure {
+            echo 'Errors detected in the pipeline.'
+        }
+    }
+}
